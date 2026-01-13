@@ -49,16 +49,12 @@ The system is engineered for high reliability and performance, utilizing **Apach
 * **Secure Authentication**: Custom JWT implementation with **Bearer Token** verification and **Redis-backed** secure reset flows.
 * **Relational Data Integrity**: Built with raw SQL (PostgreSQL) for complex joins and cascading deletes.
 
+
 ---
 
-## 📸 Screenshots
+## 🏗️ Architecture Visualization
 
-| Feature | Screenshot |
-| --- | --- |
-| **Hero Section** |  |
-| **AI Career Guide** |  |
-| **Resume Analyzer** |  |
-| **Recruiter Dashboard** |  |
+<img width="8192" height="4017" alt="image" src="https://github.com/user-attachments/assets/f3b22f10-9978-4fef-b0b4-d572ba291440" />
 
 ---
 
