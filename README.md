@@ -53,8 +53,8 @@ The system is engineered for high reliability and performance, utilizing **Apach
 ---
 
 ## 🏗️ Architecture Visualization
+<img width="8192" height="3150" alt="17688522993228865086970453771856" src="https://github.com/user-attachments/assets/3d58378c-4ae5-45ae-913b-51ab3b26b54b" />
 
-<img width="8192" height="4017" alt="image" src="https://github.com/user-attachments/assets/f3b22f10-9978-4fef-b0b4-d572ba291440" />
 
 ---
 
