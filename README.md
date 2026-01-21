@@ -1,4 +1,4 @@
-# AI-Powered Microservices Job Portal
+# HirePortal--AI Powered Microservices based Job Portal
 
 An enterprise-ready, **AI-integrated Job Portal** built using a highly scalable **Microservices Architecture**. This platform moves beyond traditional job boards by leveraging **Generative AI** to provide candidates with automated resume analysis and personalized career roadmaps.
 

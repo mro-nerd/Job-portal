@@ -14,7 +14,7 @@ const About = () => {
             <img
               src="/about.jpg"
               className="w-full max-w-[500px] rounded-2xl shadow-lg"
-              alt="About HireHeaven"
+              alt="About HirePortal"
             />
           </div>
 
@@ -22,14 +22,14 @@ const About = () => {
           <div className="text-center space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
               Our Mission At Hire
-              <span className="text-red-500">Heaven</span>
+              <span className="text-red-500">Portal</span>
             </h1>
 
             <p
               className="text-lg md:text-xl leading-relaxed opacity-90 max-w-3xl mx
 auto"
             >
-              At HireHaven, we're dedicated to revolutionizing the job search
+              At HirePortal, we're dedicated to revolutionizing the job search
               experience. Our mission is to create meaningful connections
               between talented individuals and forward-thinking companies,
               fostering growth and success for both.
@@ -46,7 +46,7 @@ auto"
               Ready to find your dream job?
             </h2>
             <p className="text-lg md:text-xl opacity-80">
-              Join thousands of successful job seekers on HireHeaven
+              Join thousands of successful job seekers on HirePortal
             </p>
             <div className="pt-4">
               <Link href="/jobs">

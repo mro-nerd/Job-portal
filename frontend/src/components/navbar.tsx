@@ -31,7 +31,7 @@ const NavBar = () => {
                 <span className="bg-linear-to-r from bg-blue-600 to-blue-800 bg-clip-text text-transparent">
                   Hire
                 </span>
-                <span className="text-red-500">Heaven</span>
+                <span className="text-red-500">Portal</span>
               </div>
             </Link>
           </div>
