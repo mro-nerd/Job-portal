@@ -1,5 +1,7 @@
 # HirePortal--AI Powered Microservices based Job Portal
+<img width="1902" height="887" alt="image" src="https://github.com/user-attachments/assets/c4acae17-3eb4-4cfe-a594-bbe1179b5ec0" />
 
+---
 An enterprise-ready, **AI-integrated Job Portal** built using a highly scalable **Microservices Architecture**. This platform moves beyond traditional job boards by leveraging **Generative AI** to provide candidates with automated resume analysis and personalized career roadmaps.
 
 The system is engineered for high reliability and performance, utilizing **Apache Kafka** for asynchronous background processing (such as critical email notifications) and **Redis** for high-speed token management and password reset flows. By decoupling services like Payments, Auth, and AI Utilities, the architecture ensures that the failure of one service does not compromise the integrity of the entire ecosystem.
