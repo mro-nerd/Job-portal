@@ -1,5 +1,6 @@
-# HirePortal--AI Powered Microservices based Job Portal
+# HirePortal-AI Powered Microservices based Job Portal
 <img width="1902" height="887" alt="image" src="https://github.com/user-attachments/assets/c4acae17-3eb4-4cfe-a594-bbe1179b5ec0" />
+
 
 ---
 An enterprise-ready, **AI-integrated Job Portal** built using a highly scalable **Microservices Architecture**. This platform moves beyond traditional job boards by leveraging **Generative AI** to provide candidates with automated resume analysis and personalized career roadmaps.
@@ -55,7 +56,8 @@ The system is engineered for high reliability and performance, utilizing **Apach
 ---
 
 ## 🏗️ Architecture Visualization
-<img width="8192" height="3150" alt="17688522993228865086970453771856" src="https://github.com/user-attachments/assets/3d58378c-4ae5-45ae-913b-51ab3b26b54b" />
+<img width="1193" height="781" alt="image" src="https://github.com/user-attachments/assets/c19528a9-1eff-412a-a864-91b12189acb9" />
+
 
 
 ---
