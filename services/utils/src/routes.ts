@@ -82,6 +82,12 @@ Mastery', 'DevOps & Cloud').",
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: prompt,
+      generationConfig: {
+        temperature: 0.4,        // Moderate creativity for personalized advice
+        maxOutputTokens: 3072,   // ~2300 words for comprehensive guidance
+        topP: 0.9,               // Diverse vocabulary for engaging content
+        topK: 40,                // Broader token selection
+      },
     });
 
     let jsonResponse;
@@ -186,6 +192,12 @@ Focus on: - File format and structure compatibility - Proper use of standard sec
           ],
         },
       ],
+      generationConfig: {
+        temperature: 0.1,        // Very low for consistent JSON structure
+        maxOutputTokens: 2048,   // ~1500 words for detailed analysis
+        topP: 0.8,               // Focused on high-probability tokens
+        topK: 20,                // Limited vocabulary for consistency
+      },
     });
 
     let jsonResponse;
