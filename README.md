@@ -3,9 +3,9 @@
 
 
 ---
-An enterprise-ready, **AI-integrated Job Portal** built using a highly scalable **Microservices Architecture**. This platform moves beyond traditional job boards by leveraging **Generative AI** to provide candidates with automated resume analysis and personalized career roadmaps.
+An enterprise-ready, **AI-integrated Job Portal** built using a highly scalable **Microservices Architecture** and deployed on **AWS EC2**. This platform moves beyond traditional job boards by leveraging **Generative AI** to provide candidates with automated resume analysis, ATS scoring, and personalized career roadmaps.
 
-The system is engineered for high reliability and performance, utilizing **Apache Kafka** for asynchronous background processing (such as critical email notifications) and **Redis** for high-speed token management and password reset flows. By decoupling services like Payments, Auth, and AI Utilities, the architecture ensures that the failure of one service does not compromise the integrity of the entire ecosystem.
+All traffic enters through a single **Nginx reverse proxy** gateway, which routes requests to the appropriate backend microservices running inside a Docker internal network. The system utilizes **Apache Kafka** for asynchronous email notifications and **Redis** for high-speed token management and secure password reset flows. By decoupling services like Payments, Auth, and AI Utilities, the architecture ensures that the failure of one service does not compromise the integrity of the entire ecosystem.
 
 ---
 
@@ -15,7 +15,7 @@ The system is engineered for high reliability and performance, utilizing **Apach
 
 * **Frontend**: [Next.js](https://nextjs.org/) 14+ (App Router), TypeScript, Tailwind CSS.
 * **Backend**: Node.js, Express.js, TypeScript.
-* **Runtime Environment**: Docker (for containerized Kafka services).
+* **Infrastructure**: Docker (containerized microservices), Nginx (reverse proxy), AWS EC2.
 
 ### **Databases & State Management**
 
@@ -25,6 +25,7 @@ The system is engineered for high reliability and performance, utilizing **Apach
 
 ### **Microservices & Communication**
 
+* **Reverse Proxy**: [Nginx](https://nginx.org/) routes all external traffic through a single public entry point (Port 80) to internal services.
 * **Message Broker**: [Apache Kafka](https://kafka.apache.org/) handles background email queues.
 * **HTTP Client**: [Axios](https://axios-http.com/) for inter-service communication and frontend API calls.
 * **Real-time Mailer**: [Nodemailer](https://nodemailer.com/) integrated with Kafka consumers.
@@ -50,6 +51,7 @@ The system is engineered for high reliability and performance, utilizing **Apach
 * **Priority Application System**: A subscription model where premium users' resumes are highlighted and prioritized for recruiters.
 * **Kafka-Powered Notifications**: Ensures application status updates and password resets are sent reliably via asynchronous email workers.
 * **Secure Authentication**: Custom JWT implementation with **Bearer Token** verification and **Redis-backed** secure reset flows.
+* **Nginx Gateway**: A single Nginx reverse proxy acts as the public entry point, routing all traffic to internal microservices within the Docker network on AWS EC2.
 * **Relational Data Integrity**: Built with raw SQL (PostgreSQL) for complex joins and cascading deletes.
 
 
@@ -81,10 +83,10 @@ KAFKA_BROKER=localhost:9092
 
 ### **2. Execution Order**
 
-1. **Start Infrastructure**: Ensure your Kafka Docker container is running.
+1. **Start Infrastructure**: Ensure Docker is running. Use `docker-compose up` to spin up Kafka, and all backend services behind Nginx.
 2. **Install Dependencies**: Run `npm install` in the root and all service directories.
 3. **Compile Services**: Run `npx tsc` in each backend folder to generate the `dist` files.
-4. **Launch Ecosystem**: Run `npm run dev` in all backend terminals and the frontend terminal.
+4. **Launch Frontend**: Run `npm run dev` in the frontend directory. The Next.js app communicates with the backend through the Nginx gateway.
 
 ---
 
